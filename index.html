@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秋吉 便當專賣</title>
+    <meta name="description" content="秋吉便當專賣 - 每日新鮮現做美味便當">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=Noto+Serif+TC:wght@400;600;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+<!-- Custom cursor -->
+<div id="cursor"></div>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">關於我們</a>
+  <a href="#menu-tabs-wrapper" onclick="closeMobile()">菜單</a>
+  <a href="#hours" onclick="closeMobile()">營業時間</a>
+  <a href="#contact" onclick="closeMobile()">聯絡</a>
+</div>
+
+<!-- ══════════ NAV ══════════ -->
+<nav id="nav">
+  <div class="nav-left">
+    <div class="nav-name">秋吉</div>
+    <div class="nav-sep"></div>
+    <div class="nav-sub">便當專賣</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">關於</a></li>
+    <li><a href="#menu-tabs-wrapper">菜單</a></li>
+    <li><a href="#hours">時間</a></li>
+    <li><a href="#contact">聯絡</a></li>
+  </ul>
+  <div class="burger" id="burger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-dot"></span>
+      <span class="eyebrow-text">每日現做・限量供應</span>
+    </div>
+    <h1 class="hero-title">秋吉便當</h1>
+    <div class="hero-sub">便 當 專 賣</div>
+    <p class="hero-copy">阿姨手作・學生最愛・新鮮現炸</p>
+    <a class="hero-cta" href="#menu-tabs-wrapper">查看菜單 <span class="cta-arr">↓</span></a>
+  </div>
+  <div class="scroll-ind">
+    <span class="scroll-txt">SCROLL</span>
+    <div class="scroll-chevrons">
+      <div class="scroll-chev"></div>
+      <div class="scroll-chev"></div>
+      <div class="scroll-chev"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-img-wrap reveal">
+      <div class="about-img">
+        <img src="img/carousel1.jpg" alt="阿姨掌廚" class="active">
+        <img src="img/carousel2.jpg" alt="店內環境" onerror="this.style.display='none'">
+        <img src="img/carousel3.jpg" alt="新鮮食材" onerror="this.style.display='none'">
+      </div>
+      <div class="about-year-badge">
+        <span class="about-year-num">50</span>
+        <span class="about-year-label">年好手藝</span>
+      </div>
+    </div>
+    <div class="about-content reveal reveal-delay-2">
+      <div class="s-badge">OUR STORY</div>
+      <h2 class="about-title">雲林媽媽的<br><span>古早味便當</span></h2>
+      <div class="s-rule" style="margin-bottom:24px;"></div>
+      <div class="about-body">
+        <p>秋吉便當來自雲林<strong>50年好手藝的媽媽</strong>，我們的便當菜就是很家常蔬菜古早味，在南部很多外出學子回到家鄉第一件事就是回去吃便當回味。</p>
+        <p>秋吉便當秉持著<strong>南部人的人情味</strong>，讓你吃的飽，又可以試試古早味！</p>
+      </div>
+      <div class="about-features">
+        <div class="about-feat">
+          <div class="about-feat-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.696 3C14.652 3 12.887 4.197 12 5.943C11.113 4.197 9.348 3 7.304 3C4.374 3 2 5.457 2 8.481s1.817 5.796 4.165 8.073S12 21 12 21s3.374-2.133 5.835-4.446C20.46 14.088 22 11.514 22 8.481S19.626 3 16.696 3"/></svg>
+          </div>
+          <div class="about-feat-title">家常味</div>
+          <div class="about-feat-sub">每道都充滿心意</div>
+        </div>
+        <div class="about-feat">
+          <div class="about-feat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m21.88 2.15l-1.2.4a13.84 13.84 0 0 1-6.41.64a11.87 11.87 0 0 0-6.68.9A7.23 7.23 0 0 0 3.3 9.5a8.65 8.65 0 0 0 1.47 6.6c-.06.21-.12.42-.17.63A22.6 22.6 0 0 0 4 22h2a31 31 0 0 1 .59-4.32a9.25 9.25 0 0 0 4.52 1.11a11 11 0 0 0 4.28-.87C23 14.67 22 3.86 22 3.41zm-7.27 13.93c-2.61 1.11-5.73.92-7.48-.45a13.8 13.8 0 0 1 1.21-2.84A10.2 10.2 0 0 1 9.73 11a9 9 0 0 1 1.81-1.42A12 12 0 0 1 16 8V7a11.4 11.4 0 0 0-5.26 1.08a10.3 10.3 0 0 0-4.12 3.65a15 15 0 0 0-1 1.87a7 7 0 0 1-.38-3.73a5.24 5.24 0 0 1 3.14-4a8.9 8.9 0 0 1 3.82-.84c.62 0 1.23.06 1.87.11a16.2 16.2 0 0 0 6-.35C20 7.55 19.5 14 14.61 16.08"/></svg></div>
+          <div class="about-feat-title">新鮮食材</div>
+          <div class="about-feat-sub">每日採購當日用</div>
+        </div>
+        <div class="about-feat">
+          <div class="about-feat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="currentColor" fill-rule="evenodd" d="M7.432 21.501c0-9.213 7.403-16.653 16.5-16.653s16.5 7.44 16.5 16.653c0 5.334-2.437 9.896-5.614 13.579c-3.179 3.685-6.986 6.354-9.422 7.847a2.76 2.76 0 0 1-2.929 0c-2.435-1.493-6.243-4.162-9.422-7.847c-3.177-3.683-5.613-8.245-5.613-13.579M23.932.848c-11.338 0-20.5 9.262-20.5 20.653c0 6.616 3.03 12.071 6.584 16.191c3.553 4.118 7.74 7.04 10.361 8.645a6.76 6.76 0 0 0 7.11 0c2.62-1.606 6.808-4.527 10.36-8.645c3.554-4.12 6.585-9.575 6.585-16.191c0-11.39-9.163-20.653-20.5-20.653m-8.75 19.97a8.818 8.818 0 1 1 17.636 0a8.818 8.818 0 0 1-17.636 0" clip-rule="evenodd"/></svg></div>
+          <div class="about-feat-title">南部人情味</div>
+          <div class="about-feat-sub">吃飽才是正事</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ POPULAR MENU CAROUSEL ══════════ -->
+<div class="menu-carousel-wrapper panel-yellow" id="panel-popular">
+    <div class="carousel-panel">
+      <div class="menu-carousel-inner">
+        <div class="reveal">
+          <div class="s-badge" style="background:var(--blk);color:var(--y);">MOST LOVED</div>
+          <h2 class="s-title">熱門便當</h2>
+          <p class="s-desc">每日限量・售完為止</p>
+          <div class="s-rule" style="background:var(--blk);"></div>
+        </div>
+        <div class="reveal">
+          <!-- Infinite auto-scroll carousel -->
+          <div class="inf-carousel-outer" id="popularInfOuter">
+            <div class="inf-carousel-track" id="popularInfTrack">
+              <!-- Cards will be cloned by JS for infinite loop -->
+              <div class="dish-card inf-card" data-idx="0">
+                <div class="dish-img-wrap"><img src="img/jipai.jpeg" alt="雞排" loading="lazy"><span class="d-badge">熱賣</span></div>
+                <div class="dish-body"><div class="dish-name">雞排</div><div class="dish-desc">整片雞肉排，份量足，單點加菜首選</div><div class="dish-foot"><div class="dish-price">NT$ 100</div><button class="dish-btn">當日餐</button></div></div>
+              </div>
+              <div class="dish-card inf-card" data-idx="1">
+                <div class="dish-img-wrap"><img src="img/zhapai.jpeg" alt="炸排骨" loading="lazy"><span class="d-badge">熱賣</span></div>
+                <div class="dish-body"><div class="dish-name">炸排骨</div><div class="dish-desc">帶骨豬肉一份，適合喜愛純粹肉香的你</div><div class="dish-foot"><div class="dish-price">NT$ 90</div><button class="dish-btn">當日餐</button></div></div>
+              </div>
+              <div class="dish-card inf-card" data-idx="2">
+                <div class="dish-img-wrap"><img src="img/kongrou.jpeg" alt="控肉" loading="lazy"><span class="d-badge">熱賣</span></div>
+                <div class="dish-body"><div class="dish-name">控肉</div><div class="dish-desc">台式控肉，選用五花肉，肥瘦相間，滷至軟嫩，鹹香入味</div><div class="dish-foot"><div class="dish-price">NT$ 100</div><button class="dish-btn">當日餐</button></div></div>
+              </div>
+              <div class="dish-card inf-card" data-idx="3">
+                <div class="dish-img-wrap"><img src="img/fish.jpeg" alt="鯖魚" loading="lazy"><span class="d-badge">推薦</span></div>
+                <div class="dish-body"><div class="dish-name">鯖魚</div><div class="dish-desc">薄鹽醃漬帶出深海鮮甜，魚皮烤至金黃微焦，肉質紮實細緻</div><div class="dish-foot"><div class="dish-price">NT$ 110</div><button class="dish-btn">當日餐</button></div></div>
+              </div>
+              <div class="dish-card inf-card" data-idx="4">
+                <div class="dish-img-wrap"><img src="img/zhajitui.jpeg" alt="炸雞腿" loading="lazy"></div>
+                <div class="dish-body"><div class="dish-name">炸雞腿</div><div class="dish-desc">店家自己醃漬的雞肉，炸起來鮮嫩多汁</div><div class="dish-foot"><div class="dish-price">NT$ 100</div><button class="dish-btn">當日餐</button></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ══════════ HOW-TO BAR ══════════ -->
+<div class="how-bar-wrapper">
+  <div class="how-bar">
+    <div class="how-bar-inner">
+      <div class="how-label-group">
+        <span class="how-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><rect width="10.5" height="12.5" x="2.75" y="1.75"/><path d="m5.75 7.75h4.5m-4.5 3h2.5m-2.5-6h4.5"/></g></svg></span>
+        <span class="how-label-text">如何點便當</span>
+        <div class="how-steps">
+          <span class="how-check"><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 8 8"><path fill="currentColor" d="M3 7L0 4l1-1l2 2l4-4l1 1"/></svg></span>
+          <span class="how-step">自選 4 道配菜</span>
+          <span class="how-arr">→</span>
+          <span class="how-check"><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 8 8"><path fill="currentColor" d="M3 7L0 4l1-1l2 2l4-4l1 1"/></svg></span>
+          <span class="how-step">加購升級</span>
+        </div>
+      </div>
+      <div class="how-pills">
+        <span class="how-pill">加蛋 <span class="how-pill-price">+NT$10</span></span>
+        <span class="how-pill">菜換蛋 <span class="how-pill-price">+NT$5</span></span>
+        <span class="how-pill">加 1 份菜 <span class="how-pill-price">+NT$10</span></span>
+      </div>
+      <span class="how-arr">→</span>
+      <span class="how-check"><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 8 8"><path fill="currentColor" d="M3 7L0 4l1-1l2 2l4-4l1 1"/></svg></span>
+      <span class="how-step">選擇主菜</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ FULL MENU ══════════ -->
+<section id="menu">
+  <div class="menu-section-header reveal">
+    <div class="s-badge">FULL MENU</div>
+    <h2 class="s-title">完整菜單</h2>
+    <div class="s-rule"></div>
+  </div>
+
+  <!-- ══════════ STICKY MENU TABS ══════════ -->
+  <div id="menu-tabs-wrapper">
+    <div class="menu-tabs-inner">
+      <button class="menu-tab active" onclick="switchTab('all',this)">全部菜單</button>
+      <button class="menu-tab" onclick="switchTab('special',this)">特餐便當</button>
+      <button class="menu-tab" onclick="switchTab('sides',this)">單點 &amp; 飲料</button>
+    </div>
+  </div>
+
+  <!-- ── 所有便當 panel ── -->
+  <div class="menu-panel" id="panel-all">
+    <div class="menu-inner">
+      <div class="tab-grid reveal">
+        <div class="dish-card">
+          <div class="dish-img-wrap"><img src="img/jipai.jpeg" alt="雞排" loading="lazy"><span class="d-badge">熱賣</span></div>
+                <div class="dish-body"><div class="dish-name">雞排</div><div class="dish-desc">整片雞肉排，份量足，單點加菜首選</div><div class="dish-foot"><div class="dish-price">NT$ 100</div><button class="dish-btn">當日餐</button></div>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-img-wrap"><img src="img/zhapai.jpeg" alt="炸排" loading="lazy"><span class="d-badge">熱賣</span></div>
+                <div class="dish-body"><div class="dish-name">炸排</div><div class="dish-desc">帶骨豬肉一份，適合喜愛純粹肉香的你</div><div class="dish-foot"><div class="dish-price">NT$ 90</div><button class="dish-btn">當日餐</button></div>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-img-wrap"><img src="img/kongrou.jpeg" alt="控肉" loading="lazy"><span class="d-badge">熱賣</span></div>
+                <div class="dish-body"><div class="dish-name">控肉</div><div class="dish-desc">台式控肉，選用五花肉，肥瘦相間，滷至軟嫩，鹹香入味</div><div class="dish-foot"><div class="dish-price">NT$ 100</div><button class="dish-btn">當日餐</button></div>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-img-wrap"><img src="img/fish.jpeg" alt="鯖魚" loading="lazy"><span class="d-badge">新上</span></div>
+                <div class="dish-body"><div class="dish-name">鯖魚</div><div class="dish-desc">薄鹽醃漬帶出深海鮮甜，魚皮烤至金黃微焦，肉質紮實細緻</div><div class="dish-foot"><div class="dish-price">NT$ 100</div><button class="dish-btn">當日餐</button></div>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-img-wrap"><img src="img/zhajitui.jpeg" alt="炸雞腿" loading="lazy"><span class="d-badge">熱賣</span></div>
+                <div class="dish-body"><div class="dish-name">炸雞腿</div><div class="dish-desc">店家自己醃漬的雞肉，炸起來鮮嫩多汁</div><div class="dish-foot"><div class="dish-price">NT$ 100</div><button class="dish-btn">當日餐</button></div>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-img-wrap"><img src="img/lupai.jpg" alt="香魯排骨" loading="lazy"></div>
+          <div class="dish-body">
+            <div class="dish-name">香魯排骨</div>
+            <div class="dish-desc">醬香滷排骨為主角，台式便當經典風味。</div>
+            <div class="dish-foot"><div class="dish-price">90</div><button class="dish-btn">當日餐</button></div>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-img-wrap"><div class="dish-img-placeholder">🍱</div></div>
+          <div class="dish-body">
+            <div class="dish-name">紅糟排骨便當</div>
+            <div class="dish-desc">紅麴醃製排骨，色澤紅潤，風味獨特，南部古早味</div>
+            <div class="dish-foot"><div class="dish-price">95</div><button class="dish-btn">當日餐</button></div>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-img-wrap"><div class="dish-img-placeholder">🍱</div></div>
+          <div class="dish-body">
+            <div class="dish-name">香滷豬腳便當</div>
+            <div class="dish-desc">豬腳不定時供應</div>
+            <div class="dish-foot"><div class="dish-price">90</div><button class="dish-btn">當日餐</button></div>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-img-wrap"><div class="dish-img-placeholder">🍱</div></div>
+          <div class="dish-body">
+            <div class="dish-name">雙拼便當</div>
+            <div class="dish-desc">任選兩款主菜搭配，一次滿足兩種口味</div>
+            <div class="dish-foot"><div class="dish-price">110</div><button class="dish-btn">當日餐</button></div>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-img-wrap"><img src="img/shufei.jpg" alt="舒肥雞便當" loading="lazy"></div>
+          <div class="dish-body">
+            <div class="dish-name">舒肥雞</div>
+            <div class="dish-desc">低脂高蛋白，清蒸雞胸肉配時蔬，健身族最愛</div>
+            <div class="dish-foot"><div class="dish-price">125</div><button class="dish-btn">當日餐</button></div>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-img-wrap"><img src="img/lujitui.jpg" alt="香魯雞腿" loading="lazy"></div>
+          <div class="dish-body">
+            <div class="dish-name">香魯雞腿</div>
+            <div class="dish-desc">以醬香滷雞腿為主角，鹹香順口，經典台式便當</div>
+            <div class="dish-foot"><div class="dish-price">100</div><button class="dish-btn">當日餐</button></div>
+          </div>
+        </div>
+        <div class="dish-card">
+          <div class="dish-img-wrap"><div class="dish-img-placeholder">🍱</div></div>
+          <div class="dish-body">
+            <div class="dish-name">菜盒</div>
+            <div class="dish-desc">含 5 種配菜</div>
+            <div class="dish-foot"><div class="dish-price">70</div><button class="dish-btn">當日餐</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 特餐便當 panel ── -->
+  <div class="menu-panel panel-dark" id="panel-special">
+    <div class="menu-inner">
+      <div class="reveal">
+        <div class="s-badge outline">TODAY'S SPECIAL</div>
+        <h2 class="s-title" style="color:var(--wht);">今日特餐</h2>
+        <p class="s-desc" style="color:rgba(255,255,255,.4);">每日不同・視當日食材而定</p>
+        <div class="s-rule"></div>
+      </div>
+      <div class="today-callout reveal">
+        <div class="today-callout-left">
+          <span class="today-callout-icon">✦</span>
+          <span class="today-callout-text">特餐隨當日最新鮮的食材決定，不固定菜色正是我們的特色，每天來都不夠吃！</span>
+        </div>
+        <span class="today-callout-price">◆ 全部 NT$ 85</span>
+      </div>
+      <div class="today-grid reveal">
+        <div class="today-card">
+          <div class="today-card-img">
+            <div class="today-corner tl"></div><div class="today-corner tr"></div>
+            <div class="today-corner bl"></div><div class="today-corner br"></div>
+            <span class="today-day-badge">今日限量</span>
+            <div class="today-card-icon">✕</div>
+            <div class="today-card-img-label">今日現做</div>
+          </div>
+          <div class="today-card-body">
+            <div class="today-card-name">糖醋雞丁</div>
+            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+          </div>
+        </div>
+        <div class="today-card">
+          <div class="today-card-img">
+            <div class="today-corner tl"></div><div class="today-corner tr"></div>
+            <div class="today-corner bl"></div><div class="today-corner br"></div>
+            <span class="today-day-badge">今日限量</span>
+            <div class="today-card-icon">✕</div>
+            <div class="today-card-img-label">今日現做</div>
+          </div>
+          <div class="today-card-body">
+            <div class="today-card-name">宮保雞丁</div>
+            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+          </div>
+        </div>
+        <div class="today-card">
+          <div class="today-card-img">
+            <div class="today-corner tl"></div><div class="today-corner tr"></div>
+            <div class="today-corner bl"></div><div class="today-corner br"></div>
+            <span class="today-day-badge">今日限量</span>
+            <div class="today-card-icon">✕</div>
+            <div class="today-card-img-label">今日現做</div>
+          </div>
+          <div class="today-card-body">
+            <div class="today-card-name">韓式炸雞</div>
+            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+          </div>
+        </div>
+        <div class="today-card">
+          <div class="today-card-img">
+            <div class="today-corner tl"></div><div class="today-corner tr"></div>
+            <div class="today-corner bl"></div><div class="today-corner br"></div>
+            <span class="today-day-badge">今日限量</span>
+            <div class="today-card-icon">✕</div>
+            <div class="today-card-img-label">今日現做</div>
+          </div>
+          <div class="today-card-body">
+            <div class="today-card-name">黑胡椒豬柳</div>
+            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+          </div>
+        </div>
+        <div class="today-card">
+          <div class="today-card-img">
+            <div class="today-corner tl"></div><div class="today-corner tr"></div>
+            <div class="today-corner bl"></div><div class="today-corner br"></div>
+            <span class="today-day-badge">今日限量</span>
+            <div class="today-card-icon">✕</div>
+            <div class="today-card-img-label">今日現做</div>
+          </div>
+          <div class="today-card-body">
+            <div class="today-card-name">蔥爆豬柳</div>
+            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+          </div>
+        </div>
+        <div class="today-card">
+          <div class="today-card-img">
+            <div class="today-corner tl"></div><div class="today-corner tr"></div>
+            <div class="today-corner bl"></div><div class="today-corner br"></div>
+            <span class="today-day-badge">今日限量</span>
+            <div class="today-card-icon">✕</div>
+            <div class="today-card-img-label">今日現做</div>
+          </div>
+          <div class="today-card-body">
+            <div class="today-card-name">薑汁燒肉</div>
+            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+          </div>
+        </div>
+        <div class="today-card">
+          <div class="today-card-img">
+            <div class="today-corner tl"></div><div class="today-corner tr"></div>
+            <div class="today-corner bl"></div><div class="today-corner br"></div>
+            <span class="today-day-badge">今日限量</span>
+            <div class="today-card-icon">✕</div>
+            <div class="today-card-img-label">今日現做</div>
+          </div>
+          <div class="today-card-body">
+            <div class="today-card-name">照燒棒腿</div>
+            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+          </div>
+        </div>
+        <div class="today-card">
+          <div class="today-card-img">
+            <div class="today-corner tl"></div><div class="today-corner tr"></div>
+            <div class="today-corner bl"></div><div class="today-corner br"></div>
+            <span class="today-day-badge">今日限量</span>
+            <div class="today-card-icon">✕</div>
+            <div class="today-card-img-label">今日現做</div>
+          </div>
+          <div class="today-card-body">
+            <div class="today-card-name">左宗棠棒腿</div>
+            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="today-actions reveal">
+        <button class="today-action-btn"><span>📞</span> <a href="tel:+886 438-7930">電話詢問今日菜色</a></button>
+        <button class="today-action-btn"><span>📋</span> <a href="https://maps.app.goo.gl/EzY7nNVmXa8j4NTs8" target="_blank">現場查看今日特餐</a></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 單點 & 飲料 tab panel ── -->
+  <div class="menu-panel panel-dark" id="panel-sides">
+    <div class="menu-inner">
+      <div class="sides-inner">
+        <div class="reveal">
+          <div class="s-badge outline">SIDES &amp; DRINKS</div>
+          <h2 class="s-title" style="color:var(--wht);">單點 &amp; 飲料</h2>
+          <p class="s-desc" style="color:rgba(255,255,255,.4);">配菜豐富・搭配任意</p>
+          <div class="s-rule"></div>
+        </div>
+        <div class="sides-cols reveal">
+          <!-- 單點小菜 -->
+          <div>
+            <div class="col-hd">
+              <span class="col-hd-icon">🍽</span>
+              <span class="col-hd-title">單點小菜</span>
+            </div>
+            <div class="sides-list">
+              <div class="side-row"><span class="side-name">雞腿</span><span class="side-price">NT$ 75</span></div>
+              <div class="side-row"><span class="side-name">雞排</span><span class="side-price">NT$ 75</span></div>
+              <div class="side-row"><span class="side-name">控肉</span><span class="side-price">NT$ 65</span></div>
+              <div class="side-row"><span class="side-name">紅糟肉</span><span class="side-price">NT$ 65</span></div>
+              <div class="side-row"><span class="side-name">排骨</span><span class="side-price">NT$ 50</span></div>
+              <div class="side-row"><span class="side-name">鯖魚</span><span class="side-price">NT$ 75</span></div>
+              <div class="side-row"><span class="side-name">舒肥</span><span class="side-price">NT$ 75</span></div>
+              <div class="side-row"><span class="side-name">特餐</span><span class="side-price">NT$ 65</span></div>
+            </div>
+          </div>
+          <!-- 飲料 -->
+          <div>
+            <div class="col-hd">
+              <span class="col-hd-icon">☕</span>
+              <span class="col-hd-title">飲料</span>
+            </div>
+            <div class="drink-cards">
+              <div class="drink-card">
+                <div class="drink-left">
+                  <div class="drink-icon">🍵</div>
+                  <div>
+                    <div class="drink-name">古早味紅茶</div>
+                    <div class="drink-sub">經典古早味紅茶，茶香濃郁、口感順口，帶有懷舊風味</div>
+                  </div>
+                </div>
+                <div class="drink-price">NT$ 15</div>
+              </div>
+              <div class="drink-card">
+                <div class="drink-left">
+                  <div class="drink-icon">🥤</div>
+                  <div>
+                    <div class="drink-name">冬瓜茶</div>
+                    <div class="drink-sub">古早味冬瓜茶，甘香順口，清爽解渴</div>
+                  </div>
+                </div>
+                <div class="drink-price">NT$ 15</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="hours-inner">
+    <div class="reveal">
+      <div class="s-badge">IMPORTANT INFO</div>
+      <h2 class="s-title">營業時間 &amp; 預定須知</h2>
+      <div class="s-rule"></div>
+    </div>
+    <div class="hours-cols">
+      <div class="info-card reveal">
+        <div class="info-card-hd"><span class="info-card-hd-icon">🕐</span><span class="info-card-hd-title">營業時間</span></div>
+        <div class="time-slot active"><div><div class="time-slot-label">午餐時段</div><div class="time-slot-time">11:00 – 13:30</div></div><div class="time-slot-icon">☀️</div></div>
+        <div class="time-slot"><div><div class="time-slot-label">休息時間</div><div class="time-slot-time">13:30 – 16:30</div></div><div class="time-slot-icon">💤</div></div>
+        <div class="time-slot"><div><div class="time-slot-label">晚餐時段</div><div class="time-slot-time">16:30 – 19:00</div></div><div class="time-slot-icon">🌙</div></div>
+        <p class="hours-note">＊ 菜色於休息時間重新準備，<strong>新鮮出爐</strong>，售完為止，建議提早預定。</p>
+      </div>
+      <div class="info-card reveal reveal-delay-2">
+        <div class="info-card-hd"><span class="info-card-hd-icon">📋</span><span class="info-card-hd-title">預定須知</span></div>
+        <div class="rule-item"><div class="rule-icon">🏪</div><div><div class="rule-text-title">現場點餐</div><div class="rule-text-body">親臨直接由點餐槽選菜，由我們的工讀生協助夾菜、切肉。</div></div></div>
+        <div class="rule-item"><div class="rule-icon">📞</div><div><div class="rule-text-title">電話預定自取</div><div class="rule-text-body">可來電指定取餐時間，屆時由顧客<strong>親自到店取餐</strong>，無需外送。</div></div></div>
+        <div class="rule-item"><div class="rule-icon">🛵</div><div><div class="rule-text-title">外送服務</div><div class="rule-text-body">接受外送，但需達最低訂購金額，且須視當日人手<strong>是否充足而定</strong>，建議提前來電確認。</div></div></div>
+        <div class="hours-callout"><div class="hours-callout-icon">📞</div><div class="hours-callout-text">建議來電確認：午餐尖峰時段人手繁忙，外送服務視當日人力而定，<strong>請務必致電</strong>洽詢。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 聯絡 & 資訊 ══════════ -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="reveal">
+      <div class="s-badge outline">GET IN TOUCH</div>
+      <h2 class="s-title">聯絡 &amp; 資訊</h2>
+      <div class="s-rule"></div>
+    </div>
+    <div class="contact-cols">
+      <div class="reveal">
+        <div class="cinfo-primary"><div class="cinfo-label">電話訂餐</div><div class="cinfo-icon-wrap"><div class="cinfo-icon">📞</div><div class="cinfo-value"><a href="tel:+886 438-7930">438-7930</a></div></div><div class="cinfo-sub" style="margin-top:6px;">點餐首選</div></div>
+        <div class="cinfo-row"><div class="cinfo-row-icon">💬</div><div class="cinfo-row-text"><div class="cinfo-row-label">LINE 聯絡</div><div class="cinfo-row-val"><a href="https://line.me/R/ti/p/@105stolu" target="_blank">@秋吉便當</a></div><div class="cinfo-row-sub">點擊加入好友搜尋</div></div></div>
+        <div class="cinfo-row"><div class="cinfo-row-icon">📍</div><div class="cinfo-row-text"><div class="cinfo-row-label">店面位置</div><div class="cinfo-row-val"><a href="https://maps.app.goo.gl/EzY7nNVmXa8j4NTs8" target="_blank">台灣・中壢區大仁五街55號</a></div><div class="cinfo-row-sub">點擊開啟地圖</div></div></div>
+        <!-- Interactive map -->
+        <div class="map-wrap reveal">
+          <div class="map-label">📍 店面位置・點擊互動</div>
+          <div class="map-frame-wrap">
+            <iframe
+              class="map-iframe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.2762955299445!2d121.23737297481384!3d24.95671257786656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346823cfaa8f9c85%3A0xbe58508fca3eed37!2z56eL5ZCJ5L6_55W2!5e0!3m2!1sen!2stw!4v1777557334818!5m2!1sen!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="店面位置地圖">
+            </iframe>
+            <a class="map-open-btn" href="https://maps.google.com/?q=Taipei,Taiwan" target="_blank" rel="noopener">
+              在 Google Maps 中開啟 ↗
+            </a>
+          </div>
+        </div>
+        <div class="contact-callout"><span>💡</span><span>溫馨提醒：午餐尖峰時段（11:00–13:00）電話較忙，若無人接聽請稍後再撥或以 LINE 聯絡。</span></div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="contact-form-wrap">
+          <div id="formArea">
+            <div class="form-title">留言給我們</div>
+            <div class="form-group"><label class="form-label">姓名</label><input class="form-input" type="text" placeholder="您的大名" id="fname"></div>
+            <div class="form-group"><label class="form-label">電話 / LINE</label><input class="form-input" type="text" placeholder="方便聯繫的電話或 LINE ID" id="fcontact"></div>
+            <div class="form-group"><label class="form-label">留言內容</label><textarea class="form-textarea" placeholder="預定詢問、外送細節或任何疑問…" id="fmsg" oninput="countChars()"></textarea><div class="form-char"><span id="charCount">0</span> / 500 字</div></div>
+            <button class="form-submit" onclick="submitForm()"><span>送出留言</span></button>
+          </div>
+          <div class="form-success" id="formSuccess"><div class="form-success-icon">✅</div><div class="form-success-text">留言已送出！<br>我們會盡快與您聯絡。</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="foot-brand">秋吉 便當</div>
+  <div class="foot-copy">© 2025 秋吉便當專賣 · 版權所有</div>
+</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

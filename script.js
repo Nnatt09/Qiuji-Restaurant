@@ -208,3 +208,63 @@ document.addEventListener('DOMContentLoaded', () => {
   const defaultBtn = document.querySelector('.menu-tab.active') || document.querySelector('.menu-tab');
   switchTab('all', defaultBtn);
 });
+
+/* ════════════════════════════════════════
+   LANGUAGE SWITCHER
+════════════════════════════════════════ */
+let currentLang = 'zh';
+ 
+function applyLang(lang) {
+  // Update all data-zh/en elements
+  document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+    const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-zh');
+    // Use innerHTML for elements that may contain HTML (p, h2, div with <br> etc.)
+    const tag = el.tagName.toLowerCase();
+    if (['p','h2','h1','div','span','button','a','label'].includes(tag)) {
+      el.innerHTML = text;
+    } else {
+      el.textContent = text;
+    }
+  });
+ 
+  // Update input/textarea placeholders
+  document.querySelectorAll('[data-placeholder-zh][data-placeholder-en]').forEach(el => {
+    el.placeholder = lang === 'en' ? el.getAttribute('data-placeholder-en') : el.getAttribute('data-placeholder-zh');
+  });
+ 
+  // Toggle button label
+  const btn = document.getElementById('langToggle');
+  if (btn) {
+    const zhSpan = btn.querySelector('.lang-toggle-zh');
+    const enSpan = btn.querySelector('.lang-toggle-en');
+    if (lang === 'en') {
+      zhSpan.style.display = 'none';
+      enSpan.style.display = '';
+    } else {
+      zhSpan.style.display = '';
+      enSpan.style.display = 'none';
+    }
+  }
+ 
+  // Update <html lang>
+  document.documentElement.lang = lang === 'en' ? 'en' : 'zh-TW';
+ 
+  // Update page title
+  document.title = lang === 'en' ? 'Qiuji Bento' : '秋吉 便當專賣';
+ 
+  // Re-init dish btn text for any JS-modified buttons
+  document.querySelectorAll('.dish-btn').forEach(btn => {
+    if (!btn.classList.contains('clicked')) {
+      btn.textContent = lang === 'en' ? "Today's Menu" : '當日餐';
+    }
+  });
+}
+ 
+function toggleLang() {
+  document.body.classList.add('lang-switching');
+  setTimeout(() => {
+    currentLang = currentLang === 'zh' ? 'en' : 'zh';
+    applyLang(currentLang);
+    document.body.classList.remove('lang-switching');
+  }, 120);
+}

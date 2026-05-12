@@ -666,3 +666,36 @@ footer { background:#080808; padding:32px 52px; display:flex; justify-content:sp
   .about-features { gap:10px; }
   .map-iframe { height:180px; }
 }
+
+/* ════════════════════════════════════════
+   LANGUAGE TOGGLE BUTTON
+════════════════════════════════════════ */
+.lang-toggle {
+  background: transparent;
+  border: 1.5px solid rgba(245,197,24,.5);
+  color: var(--y);
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 5px 12px;
+  border-radius: 3px;
+  cursor: none;
+  transition: background .2s, border-color .2s, color .2s;
+  white-space: nowrap;
+  margin-right: 8px;
+}
+.lang-toggle:hover {
+  background: var(--y);
+  color: var(--blk);
+  border-color: var(--y);
+}
+ 
+/* Lang fade transition */
+[data-zh], [data-en] {
+  transition: opacity .18s ease;
+}
+body.lang-switching [data-zh],
+body.lang-switching [data-en] {
+  opacity: 0;
+}

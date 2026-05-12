@@ -15,10 +15,10 @@
 
 <!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#about" onclick="closeMobile()">關於我們</a>
-  <a href="#menu-tabs-wrapper" onclick="closeMobile()">菜單</a>
-  <a href="#hours" onclick="closeMobile()">營業時間</a>
-  <a href="#contact" onclick="closeMobile()">聯絡</a>
+  <a href="#about" onclick="closeMobile()" data-zh="關於我們" data-en="About Us">關於我們</a>
+  <a href="#menu-tabs-wrapper" onclick="closeMobile()" data-zh="菜單" data-en="Menu">菜單</a>
+  <a href="#hours" onclick="closeMobile()" data-zh="營業時間" data-en="Hours">營業時間</a>
+  <a href="#contact" onclick="closeMobile()" data-zh="聯絡" data-en="Contact">聯絡</a>
 </div>
 
 <!-- ══════════ NAV ══════════ -->
@@ -29,11 +29,15 @@
     <div class="nav-sub">便當專賣</div>
   </div>
   <ul class="nav-links">
-    <li><a href="#about">關於</a></li>
-    <li><a href="#menu-tabs-wrapper">菜單</a></li>
-    <li><a href="#hours">時間</a></li>
-    <li><a href="#contact">聯絡</a></li>
+    <li><a href="#about" data-zh="關於" data-en="About">關於</a></li>
+    <li><a href="#menu-tabs-wrapper" data-zh="菜單" data-en="Menu">菜單</a></li>
+    <li><a href="#hours" data-zh="時間" data-en="Hours">時間</a></li>
+    <li><a href="#contact" data-zh="聯絡" data-en="Contact">聯絡</a></li>
   </ul>
+  <button class="lang-toggle" id="langToggle" onclick="toggleLang()" aria-label="切換語言 / Switch Language">
+    <span class="lang-toggle-zh">EN</span>
+    <span class="lang-toggle-en" style="display:none">中</span>
+  </button>
   <div class="burger" id="burger" onclick="toggleMobile()">
     <span></span><span></span><span></span>
   </div>
@@ -47,12 +51,12 @@
   <div class="hero-content">
     <div class="hero-eyebrow">
       <span class="eyebrow-dot"></span>
-      <span class="eyebrow-text">每日現做・限量供應</span>
+      <span class="eyebrow-text" data-zh="每日現做・限量供應" data-en="Fresh Daily · Limited Supply">每日現做・限量供應</span>
     </div>
-    <h1 class="hero-title">秋吉便當</h1>
-    <div class="hero-sub">便 當 專 賣</div>
-    <p class="hero-copy">阿姨手作・學生最愛・新鮮現炸</p>
-    <a class="hero-cta" href="#menu-tabs-wrapper">查看菜單 <span class="cta-arr">↓</span></a>
+    <h1 class="hero-title" data-zh="秋吉便當" data-en="Qiuji Bento">秋吉便當</h1>
+    <div class="hero-sub" data-zh="便 當 專 賣" data-en="BENTO SPECIALIST">便 當 專 賣</div>
+    <p class="hero-copy" data-zh="阿姨手作・學生最愛・新鮮現炸" data-en="Homemade · Student Favourite · Fried Fresh">阿姨手作・學生最愛・新鮮現炸</p>
+    <a class="hero-cta" href="#menu-tabs-wrapper" data-zh="查看菜單 ↓" data-en="View Menu ↓">查看菜單 <span class="cta-arr">↓</span></a>
   </div>
   <div class="scroll-ind">
     <span class="scroll-txt">SCROLL</span>
@@ -75,34 +79,34 @@
       </div>
       <div class="about-year-badge">
         <span class="about-year-num">50</span>
-        <span class="about-year-label">年好手藝</span>
+        <span class="about-year-label" data-zh="年好手藝" data-en="Years of Craft">年好手藝</span>
       </div>
     </div>
     <div class="about-content reveal reveal-delay-2">
       <div class="s-badge">OUR STORY</div>
-      <h2 class="about-title">雲林媽媽的<br><span>古早味便當</span></h2>
+      <h2 class="about-title" data-zh="雲林媽媽的<br><span>古早味便當</span>" data-en="A Mom from Yunlin's<br><span>Classic Homestyle Bento</span>">雲林媽媽的<br><span>古早味便當</span></h2>
       <div class="s-rule" style="margin-bottom:24px;"></div>
       <div class="about-body">
-        <p>秋吉便當來自雲林<strong>50年好手藝的媽媽</strong>，我們的便當菜就是很家常蔬菜古早味，在南部很多外出學子回到家鄉第一件事就是回去吃便當回味。</p>
-        <p>秋吉便當秉持著<strong>南部人的人情味</strong>，讓你吃的飽，又可以試試古早味！</p>
+        <p data-zh="秋吉便當來自雲林<strong>50年好手藝的媽媽</strong>，我們的便當菜就是很家常蔬菜古早味，在南部很多外出學子回到家鄉第一件事就是回去吃便當回味。" data-en="Qiuji Bento was born from a mom in Yunlin with <strong>50 years of cooking skill</strong>. Our bentos are simple, home-cooked southern Taiwanese dishes — the first thing many students do when returning home is come back for a taste of these flavours.">秋吉便當來自雲林<strong>50年好手藝的媽媽</strong>，我們的便當菜就是很家常蔬菜古早味，在南部很多外出學子回到家鄉第一件事就是回去吃便當回味。</p>
+        <p data-zh="秋吉便當秉持著<strong>南部人的人情味</strong>，讓你吃的飽，又可以試試古早味！" data-en="Qiuji Bento is built on the <strong>warmth of southern Taiwanese hospitality</strong> — we make sure you leave full and happy!">秋吉便當秉持著<strong>南部人的人情味</strong>，讓你吃的飽，又可以試試古早味！</p>
       </div>
       <div class="about-features">
         <div class="about-feat">
           <div class="about-feat-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.696 3C14.652 3 12.887 4.197 12 5.943C11.113 4.197 9.348 3 7.304 3C4.374 3 2 5.457 2 8.481s1.817 5.796 4.165 8.073S12 21 12 21s3.374-2.133 5.835-4.446C20.46 14.088 22 11.514 22 8.481S19.626 3 16.696 3"/></svg>
           </div>
-          <div class="about-feat-title">家常味</div>
-          <div class="about-feat-sub">每道都充滿心意</div>
+          <div class="about-feat-title" data-zh="家常味" data-en="Home Cooking">家常味</div>
+          <div class="about-feat-sub" data-zh="每道都充滿心意" data-en="Made with love">每道都充滿心意</div>
         </div>
         <div class="about-feat">
           <div class="about-feat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m21.88 2.15l-1.2.4a13.84 13.84 0 0 1-6.41.64a11.87 11.87 0 0 0-6.68.9A7.23 7.23 0 0 0 3.3 9.5a8.65 8.65 0 0 0 1.47 6.6c-.06.21-.12.42-.17.63A22.6 22.6 0 0 0 4 22h2a31 31 0 0 1 .59-4.32a9.25 9.25 0 0 0 4.52 1.11a11 11 0 0 0 4.28-.87C23 14.67 22 3.86 22 3.41zm-7.27 13.93c-2.61 1.11-5.73.92-7.48-.45a13.8 13.8 0 0 1 1.21-2.84A10.2 10.2 0 0 1 9.73 11a9 9 0 0 1 1.81-1.42A12 12 0 0 1 16 8V7a11.4 11.4 0 0 0-5.26 1.08a10.3 10.3 0 0 0-4.12 3.65a15 15 0 0 0-1 1.87a7 7 0 0 1-.38-3.73a5.24 5.24 0 0 1 3.14-4a8.9 8.9 0 0 1 3.82-.84c.62 0 1.23.06 1.87.11a16.2 16.2 0 0 0 6-.35C20 7.55 19.5 14 14.61 16.08"/></svg></div>
-          <div class="about-feat-title">新鮮食材</div>
-          <div class="about-feat-sub">每日採購當日用</div>
+          <div class="about-feat-title" data-zh="新鮮食材" data-en="Fresh Ingredients">新鮮食材</div>
+          <div class="about-feat-sub" data-zh="每日採購當日用" data-en="Sourced fresh daily">每日採購當日用</div>
         </div>
         <div class="about-feat">
           <div class="about-feat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="currentColor" fill-rule="evenodd" d="M7.432 21.501c0-9.213 7.403-16.653 16.5-16.653s16.5 7.44 16.5 16.653c0 5.334-2.437 9.896-5.614 13.579c-3.179 3.685-6.986 6.354-9.422 7.847a2.76 2.76 0 0 1-2.929 0c-2.435-1.493-6.243-4.162-9.422-7.847c-3.177-3.683-5.613-8.245-5.613-13.579M23.932.848c-11.338 0-20.5 9.262-20.5 20.653c0 6.616 3.03 12.071 6.584 16.191c3.553 4.118 7.74 7.04 10.361 8.645a6.76 6.76 0 0 0 7.11 0c2.62-1.606 6.808-4.527 10.36-8.645c3.554-4.12 6.585-9.575 6.585-16.191c0-11.39-9.163-20.653-20.5-20.653m-8.75 19.97a8.818 8.818 0 1 1 17.636 0a8.818 8.818 0 0 1-17.636 0" clip-rule="evenodd"/></svg></div>
-          <div class="about-feat-title">南部人情味</div>
-          <div class="about-feat-sub">吃飽才是正事</div>
+          <div class="about-feat-title" data-zh="南部人情味" data-en="Southern Warmth">南部人情味</div>
+          <div class="about-feat-sub" data-zh="吃飽才是正事" data-en="Leaving full is the priority">吃飽才是正事</div>
         </div>
       </div>
     </div>
@@ -115,8 +119,8 @@
       <div class="menu-carousel-inner">
         <div class="reveal">
           <div class="s-badge" style="background:var(--blk);color:var(--y);">MOST LOVED</div>
-          <h2 class="s-title">熱門便當</h2>
-          <p class="s-desc">每日限量・售完為止</p>
+          <h2 class="s-title" data-zh="熱門便當" data-en="Most Popular">熱門便當</h2>
+          <p class="s-desc" data-zh="每日限量・售完為止" data-en="Limited daily · While supplies last">每日限量・售完為止</p>
           <div class="s-rule" style="background:var(--blk);"></div>
         </div>
         <div class="reveal">
@@ -126,23 +130,23 @@
               <!-- Cards will be cloned by JS for infinite loop -->
               <div class="dish-card inf-card" data-idx="0">
                 <div class="dish-img-wrap"><img src="img/jipai.jpeg" alt="雞排" loading="lazy"><span class="d-badge">熱賣</span></div>
-                <div class="dish-body"><div class="dish-name">雞排</div><div class="dish-desc">整片雞肉排，份量足，單點加菜首選</div><div class="dish-foot"><div class="dish-price">NT$ 100</div><button class="dish-btn">當日餐</button></div></div>
+                <div class="dish-body"><div class="dish-name" data-zh="雞排" data-en="Fried Chicken Steak">雞排</div><div class="dish-desc" data-zh="整片雞肉排，份量足，單點加菜首選" data-en="Whole fried chicken breast, generous portion, great as a side upgrade">整片雞肉排，份量足，單點加菜首選</div><div class="dish-foot"><div class="dish-price">100</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div></div>
               </div>
               <div class="dish-card inf-card" data-idx="1">
                 <div class="dish-img-wrap"><img src="img/zhapai.jpeg" alt="炸排骨" loading="lazy"><span class="d-badge">熱賣</span></div>
-                <div class="dish-body"><div class="dish-name">炸排骨</div><div class="dish-desc">帶骨豬肉一份，適合喜愛純粹肉香的你</div><div class="dish-foot"><div class="dish-price">NT$ 90</div><button class="dish-btn">當日餐</button></div></div>
+                <div class="dish-body"><div class="dish-name" data-zh="炸排骨" data-en="Fried Pork Cutlet">炸排骨</div><div class="dish-desc" data-zh="去骨豬肉一份，適合喜愛純粹肉香的你" data-en="Boneless pork, perfect for those who love pure meat flavour">帶骨豬肉一份，適合喜愛純粹肉香的你</div><div class="dish-foot"><div class="dish-price">90</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div></div>
               </div>
               <div class="dish-card inf-card" data-idx="2">
                 <div class="dish-img-wrap"><img src="img/kongrou.jpeg" alt="控肉" loading="lazy"><span class="d-badge">熱賣</span></div>
-                <div class="dish-body"><div class="dish-name">控肉</div><div class="dish-desc">台式控肉，選用五花肉，肥瘦相間，滷至軟嫩，鹹香入味</div><div class="dish-foot"><div class="dish-price">NT$ 100</div><button class="dish-btn">當日餐</button></div></div>
+                <div class="dish-body"><div class="dish-name" data-zh="控肉" data-en="Braised Pork Belly">控肉</div><div class="dish-desc" data-zh="台式控肉，選用五花肉，肥瘦相間，滷至軟嫩，鹹香入味" data-en="Taiwanese braised pork belly, tender and savoury with rich soy flavour">台式控肉，選用五花肉，肥瘦相間，滷至軟嫩，鹹香入味</div><div class="dish-foot"><div class="dish-price">100</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div></div>
               </div>
               <div class="dish-card inf-card" data-idx="3">
                 <div class="dish-img-wrap"><img src="img/fish.jpeg" alt="鯖魚" loading="lazy"><span class="d-badge">推薦</span></div>
-                <div class="dish-body"><div class="dish-name">鯖魚</div><div class="dish-desc">薄鹽醃漬帶出深海鮮甜，魚皮烤至金黃微焦，肉質紮實細緻</div><div class="dish-foot"><div class="dish-price">NT$ 110</div><button class="dish-btn">當日餐</button></div></div>
+                <div class="dish-body"><div class="dish-name" data-zh="鯖魚" data-en="Mackerel">鯖魚</div><div class="dish-desc" data-zh="薄鹽醃漬帶出深海鮮甜，魚皮烤至金黃微焦，肉質紮實細緻" data-en="Lightly salted to bring out oceanic sweetness, skin grilled golden and crisp">薄鹽醃漬帶出深海鮮甜，魚皮烤至金黃微焦，肉質紮實細緻</div><div class="dish-foot"><div class="dish-price">110</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div></div>
               </div>
               <div class="dish-card inf-card" data-idx="4">
                 <div class="dish-img-wrap"><img src="img/zhajitui.jpeg" alt="炸雞腿" loading="lazy"></div>
-                <div class="dish-body"><div class="dish-name">炸雞腿</div><div class="dish-desc">店家自己醃漬的雞肉，炸起來鮮嫩多汁</div><div class="dish-foot"><div class="dish-price">NT$ 100</div><button class="dish-btn">當日餐</button></div></div>
+                <div class="dish-body"><div class="dish-name" data-zh="炸雞腿" data-en="Fried Chicken Leg">炸雞腿</div><div class="dish-desc" data-zh="店家自己醃漬的雞肉，炸起來鮮嫩多汁" data-en="House-marinated chicken, fried to juicy perfection">店家自己醃漬的雞肉，炸起來鮮嫩多汁</div><div class="dish-foot"><div class="dish-price">100</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div></div>
               </div>
             </div>
           </div>
@@ -157,23 +161,23 @@
     <div class="how-bar-inner">
       <div class="how-label-group">
         <span class="how-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><rect width="10.5" height="12.5" x="2.75" y="1.75"/><path d="m5.75 7.75h4.5m-4.5 3h2.5m-2.5-6h4.5"/></g></svg></span>
-        <span class="how-label-text">如何點便當</span>
+        <span class="how-label-text" data-zh="如何點便當" data-en="How to Order">如何點便當</span>
         <div class="how-steps">
           <span class="how-check"><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 8 8"><path fill="currentColor" d="M3 7L0 4l1-1l2 2l4-4l1 1"/></svg></span>
-          <span class="how-step">自選 4 道配菜</span>
+          <span class="how-step" data-zh="自選 4 道配菜" data-en="Choose 4 sides">自選 4 道配菜</span>
           <span class="how-arr">→</span>
           <span class="how-check"><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 8 8"><path fill="currentColor" d="M3 7L0 4l1-1l2 2l4-4l1 1"/></svg></span>
-          <span class="how-step">加購升級</span>
+          <span class="how-step" data-zh="加購升級" data-en="Upgrade add-ons">加購升級</span>
         </div>
       </div>
       <div class="how-pills">
-        <span class="how-pill">加蛋 <span class="how-pill-price">+NT$10</span></span>
-        <span class="how-pill">菜換蛋 <span class="how-pill-price">+NT$5</span></span>
-        <span class="how-pill">加 1 份菜 <span class="how-pill-price">+NT$10</span></span>
+        <span class="how-pill" data-zh="加蛋" data-en="Add egg">加蛋 <span class="how-pill-price">+NT$10</span></span>
+        <span class="how-pill" data-zh="菜換蛋" data-en="Swap veg for egg">菜換蛋 <span class="how-pill-price">+NT$5</span></span>
+        <span class="how-pill" data-zh="加 1 份菜" data-en="Extra side">加 1 份菜 <span class="how-pill-price">+NT$10</span></span>
       </div>
       <span class="how-arr">→</span>
       <span class="how-check"><svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 8 8"><path fill="currentColor" d="M3 7L0 4l1-1l2 2l4-4l1 1"/></svg></span>
-      <span class="how-step">選擇主菜</span>
+      <span class="how-step" data-zh="選擇主菜" data-en="Pick a main">選擇主菜</span>
     </div>
   </div>
 </div>
@@ -182,16 +186,16 @@
 <section id="menu">
   <div class="menu-section-header reveal">
     <div class="s-badge">FULL MENU</div>
-    <h2 class="s-title">完整菜單</h2>
+    <h2 class="s-title" data-zh="完整菜單" data-en="Full Menu">完整菜單</h2>
     <div class="s-rule"></div>
   </div>
 
   <!-- ══════════ STICKY MENU TABS ══════════ -->
   <div id="menu-tabs-wrapper">
     <div class="menu-tabs-inner">
-      <button class="menu-tab active" onclick="switchTab('all',this)">全部菜單</button>
-      <button class="menu-tab" onclick="switchTab('special',this)">特餐便當</button>
-      <button class="menu-tab" onclick="switchTab('sides',this)">單點 &amp; 飲料</button>
+      <button class="menu-tab active" onclick="switchTab('all',this)" data-zh="全部菜單" data-en="All Items">全部菜單</button>
+      <button class="menu-tab" onclick="switchTab('special',this)" data-zh="特餐便當" data-en="Daily Specials">特餐便當</button>
+      <button class="menu-tab" onclick="switchTab('sides',this)" data-zh="單點 &amp; 飲料" data-en="Sides &amp; Drinks">單點 &amp; 飲料</button>
     </div>
   </div>
 
@@ -201,83 +205,83 @@
       <div class="tab-grid reveal">
         <div class="dish-card">
           <div class="dish-img-wrap"><img src="img/jipai.jpeg" alt="雞排" loading="lazy"><span class="d-badge">熱賣</span></div>
-                <div class="dish-body"><div class="dish-name">雞排</div><div class="dish-desc">整片雞肉排，份量足，單點加菜首選</div><div class="dish-foot"><div class="dish-price">NT$ 100</div><button class="dish-btn">當日餐</button></div>
+                <div class="dish-body"><div class="dish-name" data-zh="雞排" data-en="Fried Chicken Steak">雞排</div><div class="dish-desc" data-zh="整片雞肉排，份量足，單點加菜首選" data-en="Whole fried chicken breast, generous portion, great as a side upgrade">整片雞肉排，份量足，單點加菜首選</div><div class="dish-foot"><div class="dish-price">100</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div>
           </div>
         </div>
         <div class="dish-card">
           <div class="dish-img-wrap"><img src="img/zhapai.jpeg" alt="炸排" loading="lazy"><span class="d-badge">熱賣</span></div>
-                <div class="dish-body"><div class="dish-name">炸排</div><div class="dish-desc">帶骨豬肉一份，適合喜愛純粹肉香的你</div><div class="dish-foot"><div class="dish-price">NT$ 90</div><button class="dish-btn">當日餐</button></div>
+                <div class="dish-body"><div class="dish-name" data-zh="炸排" data-en="Fried Pork Cutlet">炸排</div><div class="dish-desc" data-zh="去骨豬肉一份，適合喜愛純粹肉香的你" data-en="Boneless pork, perfect for those who love pure meat flavour">帶骨豬肉一份，適合喜愛純粹肉香的你</div><div class="dish-foot"><div class="dish-price">90</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div>
           </div>
         </div>
         <div class="dish-card">
           <div class="dish-img-wrap"><img src="img/kongrou.jpeg" alt="控肉" loading="lazy"><span class="d-badge">熱賣</span></div>
-                <div class="dish-body"><div class="dish-name">控肉</div><div class="dish-desc">台式控肉，選用五花肉，肥瘦相間，滷至軟嫩，鹹香入味</div><div class="dish-foot"><div class="dish-price">NT$ 100</div><button class="dish-btn">當日餐</button></div>
+                <div class="dish-body"><div class="dish-name" data-zh="控肉" data-en="Braised Pork Belly">控肉</div><div class="dish-desc" data-zh="台式控肉，選用五花肉，肥瘦相間，滷至軟嫩，鹹香入味" data-en="Taiwanese braised pork belly, tender and savoury with rich soy flavour">台式控肉，選用五花肉，肥瘦相間，滷至軟嫩，鹹香入味</div><div class="dish-foot"><div class="dish-price">100</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div>
           </div>
         </div>
         <div class="dish-card">
           <div class="dish-img-wrap"><img src="img/fish.jpeg" alt="鯖魚" loading="lazy"><span class="d-badge">新上</span></div>
-                <div class="dish-body"><div class="dish-name">鯖魚</div><div class="dish-desc">薄鹽醃漬帶出深海鮮甜，魚皮烤至金黃微焦，肉質紮實細緻</div><div class="dish-foot"><div class="dish-price">NT$ 100</div><button class="dish-btn">當日餐</button></div>
+                <div class="dish-body"><div class="dish-name" data-zh="鯖魚" data-en="Mackerel">鯖魚</div><div class="dish-desc" data-zh="薄鹽醃漬帶出深海鮮甜，魚皮烤至金黃微焦，肉質紮實細緻" data-en="Lightly salted to bring out oceanic sweetness, skin grilled golden and crisp">薄鹽醃漬帶出深海鮮甜，魚皮烤至金黃微焦，肉質紮實細緻</div><div class="dish-foot"><div class="dish-price">100</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div>
           </div>
         </div>
         <div class="dish-card">
           <div class="dish-img-wrap"><img src="img/zhajitui.jpeg" alt="炸雞腿" loading="lazy"><span class="d-badge">熱賣</span></div>
-                <div class="dish-body"><div class="dish-name">炸雞腿</div><div class="dish-desc">店家自己醃漬的雞肉，炸起來鮮嫩多汁</div><div class="dish-foot"><div class="dish-price">NT$ 100</div><button class="dish-btn">當日餐</button></div>
+                <div class="dish-body"><div class="dish-name" data-zh="炸雞腿" data-en="Fried Chicken Leg">炸雞腿</div><div class="dish-desc" data-zh="店家自己醃漬的雞肉，炸起來鮮嫩多汁" data-en="House-marinated chicken, fried to juicy perfection">店家自己醃漬的雞肉，炸起來鮮嫩多汁</div><div class="dish-foot"><div class="dish-price">100</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div>
           </div>
         </div>
         <div class="dish-card">
           <div class="dish-img-wrap"><img src="img/lupai.jpg" alt="香魯排骨" loading="lazy"></div>
           <div class="dish-body">
-            <div class="dish-name">香魯排骨</div>
-            <div class="dish-desc">醬香滷排骨為主角，台式便當經典風味。</div>
-            <div class="dish-foot"><div class="dish-price">90</div><button class="dish-btn">當日餐</button></div>
+            <div class="dish-name" data-zh="香魯排骨" data-en="Braised Pork Ribs">香魯排骨</div>
+            <div class="dish-desc" data-zh="醬香滷排骨為主角，台式便當經典風味。" data-en="Soy-braised ribs, a classic Taiwanese bento staple">醬香滷排骨為主角，台式便當經典風味。</div>
+            <div class="dish-foot"><div class="dish-price">90</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div>
           </div>
         </div>
         <div class="dish-card">
           <div class="dish-img-wrap"><div class="dish-img-placeholder">🍱</div></div>
           <div class="dish-body">
-            <div class="dish-name">紅糟排骨便當</div>
-            <div class="dish-desc">紅麴醃製排骨，色澤紅潤，風味獨特，南部古早味</div>
-            <div class="dish-foot"><div class="dish-price">95</div><button class="dish-btn">當日餐</button></div>
+            <div class="dish-name" data-zh="紅糟排骨便當" data-en="Red Yeast Rice Ribs Bento">紅糟排骨便當</div>
+            <div class="dish-desc" data-zh="紅麴醃製排骨，色澤紅潤，風味獨特，南部古早味" data-en="Red yeast-marinated ribs with a rich, distinctive southern Taiwanese flavour">紅麴醃製排骨，色澤紅潤，風味獨特，南部古早味</div>
+            <div class="dish-foot"><div class="dish-price">95</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div>
           </div>
         </div>
         <div class="dish-card">
           <div class="dish-img-wrap"><div class="dish-img-placeholder">🍱</div></div>
           <div class="dish-body">
-            <div class="dish-name">香滷豬腳便當</div>
-            <div class="dish-desc">豬腳不定時供應</div>
-            <div class="dish-foot"><div class="dish-price">90</div><button class="dish-btn">當日餐</button></div>
+            <div class="dish-name" data-zh="香滷豬腳便當" data-en="Braised Pork Trotter Bento">香滷豬腳便當</div>
+            <div class="dish-desc" data-zh="豬腳不定時供應" data-en="Available on select days — ask at the counter">豬腳不定時供應</div>
+            <div class="dish-foot"><div class="dish-price">90</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div>
           </div>
         </div>
         <div class="dish-card">
           <div class="dish-img-wrap"><div class="dish-img-placeholder">🍱</div></div>
           <div class="dish-body">
-            <div class="dish-name">雙拼便當</div>
-            <div class="dish-desc">任選兩款主菜搭配，一次滿足兩種口味</div>
-            <div class="dish-foot"><div class="dish-price">110</div><button class="dish-btn">當日餐</button></div>
+            <div class="dish-name" data-zh="雙拼便當" data-en="Combo Bento">雙拼便當</div>
+            <div class="dish-desc" data-zh="任選兩款主菜搭配，一次滿足兩種口味" data-en="Choose any two mains for the ultimate double satisfaction">任選兩款主菜搭配，一次滿足兩種口味</div>
+            <div class="dish-foot"><div class="dish-price">110</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div>
           </div>
         </div>
         <div class="dish-card">
           <div class="dish-img-wrap"><img src="img/shufei.jpg" alt="舒肥雞便當" loading="lazy"></div>
           <div class="dish-body">
-            <div class="dish-name">舒肥雞</div>
-            <div class="dish-desc">低脂高蛋白，清蒸雞胸肉配時蔬，健身族最愛</div>
-            <div class="dish-foot"><div class="dish-price">125</div><button class="dish-btn">當日餐</button></div>
+            <div class="dish-name" data-zh="舒肥雞" data-en="Sous Vide Chicken">舒肥雞</div>
+            <div class="dish-desc" data-zh="低脂高蛋白，清蒸雞胸肉配時蔬，健身族最愛" data-en="Low-fat, high-protein sous vide chicken breast with seasonal vegetables">低脂高蛋白，清蒸雞胸肉配時蔬，健身族最愛</div>
+            <div class="dish-foot"><div class="dish-price">125</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div>
           </div>
         </div>
         <div class="dish-card">
           <div class="dish-img-wrap"><img src="img/lujitui.jpg" alt="香魯雞腿" loading="lazy"></div>
           <div class="dish-body">
-            <div class="dish-name">香魯雞腿</div>
-            <div class="dish-desc">以醬香滷雞腿為主角，鹹香順口，經典台式便當</div>
-            <div class="dish-foot"><div class="dish-price">100</div><button class="dish-btn">當日餐</button></div>
+            <div class="dish-name" data-zh="香魯雞腿" data-en="Braised Chicken Leg">香魯雞腿</div>
+            <div class="dish-desc" data-zh="以醬香滷雞腿為主角，鹹香順口，經典台式便當" data-en="Soy-braised chicken leg, savoury and smooth, a classic Taiwanese bento">以醬香滷雞腿為主角，鹹香順口，經典台式便當</div>
+            <div class="dish-foot"><div class="dish-price">100</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div>
           </div>
         </div>
         <div class="dish-card">
           <div class="dish-img-wrap"><div class="dish-img-placeholder">🍱</div></div>
           <div class="dish-body">
-            <div class="dish-name">菜盒</div>
-            <div class="dish-desc">含 5 種配菜</div>
-            <div class="dish-foot"><div class="dish-price">70</div><button class="dish-btn">當日餐</button></div>
+            <div class="dish-name" data-zh="菜盒" data-en="Veggie Box">菜盒</div>
+            <div class="dish-desc" data-zh="含 5 種配菜" data-en="Includes 5 side dishes">含 5 種配菜</div>
+            <div class="dish-foot"><div class="dish-price">70</div><button class="dish-btn" data-zh="當日餐" data-en="Today's Menu">當日餐</button></div>
           </div>
         </div>
       </div>
@@ -289,14 +293,14 @@
     <div class="menu-inner">
       <div class="reveal">
         <div class="s-badge outline">TODAY'S SPECIAL</div>
-        <h2 class="s-title" style="color:var(--wht);">今日特餐</h2>
-        <p class="s-desc" style="color:rgba(255,255,255,.4);">每日不同・視當日食材而定</p>
+        <h2 class="s-title" style="color:var(--wht);" data-zh="今日特餐" data-en="Daily Specials">今日特餐</h2>
+        <p class="s-desc" style="color:rgba(255,255,255,.4);" data-zh="每日不同・視當日食材而定" data-en="Changes daily · Depends on fresh ingredients">每日不同・視當日食材而定</p>
         <div class="s-rule"></div>
       </div>
       <div class="today-callout reveal">
         <div class="today-callout-left">
           <span class="today-callout-icon">✦</span>
-          <span class="today-callout-text">特餐隨當日最新鮮的食材決定，不固定菜色正是我們的特色，每天來都不夠吃！</span>
+          <span class="today-callout-text" data-zh="特餐隨當日最新鮮的食材決定，不固定菜色正是我們的特色，每天來都不夠吃！" data-en="Specials are decided by the freshest ingredients of the day — a rotating menu is our signature, come back every day for something new!">特餐隨當日最新鮮的食材決定，不固定菜色正是我們的特色，每天來都不夠吃！</span>
         </div>
         <span class="today-callout-price">◆ 全部 NT$ 85</span>
       </div>
@@ -305,118 +309,118 @@
           <div class="today-card-img">
             <div class="today-corner tl"></div><div class="today-corner tr"></div>
             <div class="today-corner bl"></div><div class="today-corner br"></div>
-            <span class="today-day-badge">今日限量</span>
+            <span class="today-day-badge" data-zh="今日限量" data-en="Limited Today">今日限量</span>
             <div class="today-card-icon">✕</div>
-            <div class="today-card-img-label">今日現做</div>
+            <div class="today-card-img-label" data-zh="今日現做" data-en="Made Fresh Today">今日現做</div>
           </div>
           <div class="today-card-body">
-            <div class="today-card-name">糖醋雞丁</div>
-            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
-            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+            <div class="today-card-name" data-zh="糖醋雞丁" data-en="Sweet & Sour Chicken">糖醋雞丁</div>
+            <div class="today-card-desc" data-zh="視當日食材現做・每日不同，請洽現場或來電詢問" data-en="Made fresh with the day's ingredients · Changes daily — ask in-store or call">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn" data-zh="來電詢問" data-en="Call to Inquire">來電詢問</button></div>
           </div>
         </div>
         <div class="today-card">
           <div class="today-card-img">
             <div class="today-corner tl"></div><div class="today-corner tr"></div>
             <div class="today-corner bl"></div><div class="today-corner br"></div>
-            <span class="today-day-badge">今日限量</span>
+            <span class="today-day-badge" data-zh="今日限量" data-en="Limited Today">今日限量</span>
             <div class="today-card-icon">✕</div>
-            <div class="today-card-img-label">今日現做</div>
+            <div class="today-card-img-label" data-zh="今日現做" data-en="Made Fresh Today">今日現做</div>
           </div>
           <div class="today-card-body">
-            <div class="today-card-name">宮保雞丁</div>
-            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
-            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+            <div class="today-card-name" data-zh="宮保雞丁" data-en="Kung Pao Chicken">宮保雞丁</div>
+            <div class="today-card-desc" data-zh="視當日食材現做・每日不同，請洽現場或來電詢問" data-en="Made fresh with the day's ingredients · Changes daily — ask in-store or call">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn" data-zh="來電詢問" data-en="Call to Inquire">來電詢問</button></div>
           </div>
         </div>
         <div class="today-card">
           <div class="today-card-img">
             <div class="today-corner tl"></div><div class="today-corner tr"></div>
             <div class="today-corner bl"></div><div class="today-corner br"></div>
-            <span class="today-day-badge">今日限量</span>
+            <span class="today-day-badge" data-zh="今日限量" data-en="Limited Today">今日限量</span>
             <div class="today-card-icon">✕</div>
-            <div class="today-card-img-label">今日現做</div>
+            <div class="today-card-img-label" data-zh="今日現做" data-en="Made Fresh Today">今日現做</div>
           </div>
           <div class="today-card-body">
-            <div class="today-card-name">韓式炸雞</div>
-            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
-            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+            <div class="today-card-name" data-zh="韓式炸雞" data-en="Korean Fried Chicken">韓式炸雞</div>
+            <div class="today-card-desc" data-zh="視當日食材現做・每日不同，請洽現場或來電詢問" data-en="Made fresh with the day's ingredients · Changes daily — ask in-store or call">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn" data-zh="來電詢問" data-en="Call to Inquire">來電詢問</button></div>
           </div>
         </div>
         <div class="today-card">
           <div class="today-card-img">
             <div class="today-corner tl"></div><div class="today-corner tr"></div>
             <div class="today-corner bl"></div><div class="today-corner br"></div>
-            <span class="today-day-badge">今日限量</span>
+            <span class="today-day-badge" data-zh="今日限量" data-en="Limited Today">今日限量</span>
             <div class="today-card-icon">✕</div>
-            <div class="today-card-img-label">今日現做</div>
+            <div class="today-card-img-label" data-zh="今日現做" data-en="Made Fresh Today">今日現做</div>
           </div>
           <div class="today-card-body">
-            <div class="today-card-name">黑胡椒豬柳</div>
-            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
-            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+            <div class="today-card-name" data-zh="黑胡椒豬柳" data-en="Black Pepper Pork Tenderloin">黑胡椒豬柳</div>
+            <div class="today-card-desc" data-zh="視當日食材現做・每日不同，請洽現場或來電詢問" data-en="Made fresh with the day's ingredients · Changes daily — ask in-store or call">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn" data-zh="來電詢問" data-en="Call to Inquire">來電詢問</button></div>
           </div>
         </div>
         <div class="today-card">
           <div class="today-card-img">
             <div class="today-corner tl"></div><div class="today-corner tr"></div>
             <div class="today-corner bl"></div><div class="today-corner br"></div>
-            <span class="today-day-badge">今日限量</span>
+            <span class="today-day-badge" data-zh="今日限量" data-en="Limited Today">今日限量</span>
             <div class="today-card-icon">✕</div>
-            <div class="today-card-img-label">今日現做</div>
+            <div class="today-card-img-label" data-zh="今日現做" data-en="Made Fresh Today">今日現做</div>
           </div>
           <div class="today-card-body">
-            <div class="today-card-name">蔥爆豬柳</div>
-            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
-            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+            <div class="today-card-name" data-zh="蔥爆豬柳" data-en="Scallion Pork Tenderloin">蔥爆豬柳</div>
+            <div class="today-card-desc" data-zh="視當日食材現做・每日不同，請洽現場或來電詢問" data-en="Made fresh with the day's ingredients · Changes daily — ask in-store or call">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn" data-zh="來電詢問" data-en="Call to Inquire">來電詢問</button></div>
           </div>
         </div>
         <div class="today-card">
           <div class="today-card-img">
             <div class="today-corner tl"></div><div class="today-corner tr"></div>
             <div class="today-corner bl"></div><div class="today-corner br"></div>
-            <span class="today-day-badge">今日限量</span>
+            <span class="today-day-badge" data-zh="今日限量" data-en="Limited Today">今日限量</span>
             <div class="today-card-icon">✕</div>
-            <div class="today-card-img-label">今日現做</div>
+            <div class="today-card-img-label" data-zh="今日現做" data-en="Made Fresh Today">今日現做</div>
           </div>
           <div class="today-card-body">
-            <div class="today-card-name">薑汁燒肉</div>
-            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
-            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+            <div class="today-card-name" data-zh="薑汁燒肉" data-en="Ginger Grilled Pork">薑汁燒肉</div>
+            <div class="today-card-desc" data-zh="視當日食材現做・每日不同，請洽現場或來電詢問" data-en="Made fresh with the day's ingredients · Changes daily — ask in-store or call">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn" data-zh="來電詢問" data-en="Call to Inquire">來電詢問</button></div>
           </div>
         </div>
         <div class="today-card">
           <div class="today-card-img">
             <div class="today-corner tl"></div><div class="today-corner tr"></div>
             <div class="today-corner bl"></div><div class="today-corner br"></div>
-            <span class="today-day-badge">今日限量</span>
+            <span class="today-day-badge" data-zh="今日限量" data-en="Limited Today">今日限量</span>
             <div class="today-card-icon">✕</div>
-            <div class="today-card-img-label">今日現做</div>
+            <div class="today-card-img-label" data-zh="今日現做" data-en="Made Fresh Today">今日現做</div>
           </div>
           <div class="today-card-body">
-            <div class="today-card-name">照燒棒腿</div>
-            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
-            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+            <div class="today-card-name" data-zh="照燒棒腿" data-en="Teriyaki Drumstick">照燒棒腿</div>
+            <div class="today-card-desc" data-zh="視當日食材現做・每日不同，請洽現場或來電詢問" data-en="Made fresh with the day's ingredients · Changes daily — ask in-store or call">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn" data-zh="來電詢問" data-en="Call to Inquire">來電詢問</button></div>
           </div>
         </div>
         <div class="today-card">
           <div class="today-card-img">
             <div class="today-corner tl"></div><div class="today-corner tr"></div>
             <div class="today-corner bl"></div><div class="today-corner br"></div>
-            <span class="today-day-badge">今日限量</span>
+            <span class="today-day-badge" data-zh="今日限量" data-en="Limited Today">今日限量</span>
             <div class="today-card-icon">✕</div>
-            <div class="today-card-img-label">今日現做</div>
+            <div class="today-card-img-label" data-zh="今日現做" data-en="Made Fresh Today">今日現做</div>
           </div>
           <div class="today-card-body">
-            <div class="today-card-name">左宗棠棒腿</div>
-            <div class="today-card-desc">視當日食材現做・每日不同，請洽現場或來電詢問</div>
-            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn">來電詢問</button></div>
+            <div class="today-card-name" data-zh="左宗棠棒腿" data-en="General Tso's Drumstick">左宗棠棒腿</div>
+            <div class="today-card-desc" data-zh="視當日食材現做・每日不同，請洽現場或來電詢問" data-en="Made fresh with the day's ingredients · Changes daily — ask in-store or call">視當日食材現做・每日不同，請洽現場或來電詢問</div>
+            <div class="today-card-foot"><div class="today-card-price">85</div><button class="today-card-btn" data-zh="來電詢問" data-en="Call to Inquire">來電詢問</button></div>
           </div>
         </div>
       </div>
       <div class="today-actions reveal">
-        <button class="today-action-btn"><span>📞</span> <a href="tel:+886 438-7930">電話詢問今日菜色</a></button>
-        <button class="today-action-btn"><span>📋</span> <a href="https://maps.app.goo.gl/EzY7nNVmXa8j4NTs8" target="_blank">現場查看今日特餐</a></button>
+        <button class="today-action-btn"><span>📞</span> <a href="tel:+886 438-7930" data-zh="電話詢問今日菜色" data-en="Call to Ask Today's Menu">電話詢問今日菜色</a></button>
+        <button class="today-action-btn"><span>📋</span> <a href="https://maps.app.goo.gl/EzY7nNVmXa8j4NTs8" target="_blank" data-zh="現場查看今日特餐" data-en="Visit to See Today's Specials">現場查看今日特餐</a></button>
       </div>
     </div>
   </div>
@@ -428,8 +432,8 @@
       <div class="sides-inner">
         <div class="reveal">
           <div class="s-badge outline">SIDES &amp; DRINKS</div>
-          <h2 class="s-title" style="color:var(--wht);">單點 &amp; 飲料</h2>
-          <p class="s-desc" style="color:rgba(255,255,255,.4);">配菜豐富・搭配任意</p>
+          <h2 class="s-title" style="color:var(--wht);" data-zh="單點 &amp; 飲料" data-en="Sides &amp; Drinks">單點 &amp; 飲料</h2>
+          <p class="s-desc" style="color:rgba(255,255,255,.4);" data-zh="配菜豐富・搭配任意" data-en="Rich variety · Mix and match freely">配菜豐富・搭配任意</p>
           <div class="s-rule"></div>
         </div>
         <div class="sides-cols reveal">
@@ -437,32 +441,32 @@
           <div>
             <div class="col-hd">
               <span class="col-hd-icon">🍽</span>
-              <span class="col-hd-title">單點小菜</span>
+              <span class="col-hd-title" data-zh="單點小菜" data-en="À la Carte Sides">單點小菜</span>
             </div>
             <div class="sides-list">
-              <div class="side-row"><span class="side-name">雞腿</span><span class="side-price">NT$ 75</span></div>
-              <div class="side-row"><span class="side-name">雞排</span><span class="side-price">NT$ 75</span></div>
-              <div class="side-row"><span class="side-name">控肉</span><span class="side-price">NT$ 65</span></div>
-              <div class="side-row"><span class="side-name">紅糟肉</span><span class="side-price">NT$ 65</span></div>
-              <div class="side-row"><span class="side-name">排骨</span><span class="side-price">NT$ 50</span></div>
-              <div class="side-row"><span class="side-name">鯖魚</span><span class="side-price">NT$ 75</span></div>
-              <div class="side-row"><span class="side-name">舒肥</span><span class="side-price">NT$ 75</span></div>
-              <div class="side-row"><span class="side-name">特餐</span><span class="side-price">NT$ 65</span></div>
+              <div class="side-row"><span class="side-name" data-zh="雞腿" data-en="Chicken Leg">雞腿</span><span class="side-price">NT$ 75</span></div>
+              <div class="side-row"><span class="side-name" data-zh="雞排" data-en="Fried Chicken Steak">雞排</span><span class="side-price">NT$ 75</span></div>
+              <div class="side-row"><span class="side-name" data-zh="控肉" data-en="Braised Pork">控肉</span><span class="side-price">NT$ 65</span></div>
+              <div class="side-row"><span class="side-name" data-zh="紅糟肉" data-en="Red Yeast Pork">紅糟肉</span><span class="side-price">NT$ 65</span></div>
+              <div class="side-row"><span class="side-name" data-zh="排骨" data-en="Pork Ribs">排骨</span><span class="side-price">NT$ 50</span></div>
+              <div class="side-row"><span class="side-name" data-zh="鯖魚" data-en="Mackerel">鯖魚</span><span class="side-price">NT$ 75</span></div>
+              <div class="side-row"><span class="side-name" data-zh="舒肥" data-en="Sous Vide Chicken">舒肥</span><span class="side-price">NT$ 75</span></div>
+              <div class="side-row"><span class="side-name" data-zh="特餐" data-en="Daily Special">特餐</span><span class="side-price">NT$ 65</span></div>
             </div>
           </div>
           <!-- 飲料 -->
           <div>
             <div class="col-hd">
               <span class="col-hd-icon">☕</span>
-              <span class="col-hd-title">飲料</span>
+              <span class="col-hd-title" data-zh="飲料" data-en="Drinks">飲料</span>
             </div>
             <div class="drink-cards">
               <div class="drink-card">
                 <div class="drink-left">
                   <div class="drink-icon">🍵</div>
                   <div>
-                    <div class="drink-name">古早味紅茶</div>
-                    <div class="drink-sub">經典古早味紅茶，茶香濃郁、口感順口，帶有懷舊風味</div>
+                    <div class="drink-name" data-zh="古早味紅茶" data-en="Classic Black Tea">古早味紅茶</div>
+                    <div class="drink-sub" data-zh="經典古早味紅茶，茶香濃郁、口感順口，帶有懷舊風味" data-en="A nostalgic classic — rich tea aroma, smooth and refreshing">經典古早味紅茶，茶香濃郁、口感順口，帶有懷舊風味</div>
                   </div>
                 </div>
                 <div class="drink-price">NT$ 15</div>
@@ -471,8 +475,8 @@
                 <div class="drink-left">
                   <div class="drink-icon">🥤</div>
                   <div>
-                    <div class="drink-name">冬瓜茶</div>
-                    <div class="drink-sub">古早味冬瓜茶，甘香順口，清爽解渴</div>
+                    <div class="drink-name" data-zh="冬瓜茶" data-en="Winter Melon Tea">冬瓜茶</div>
+                    <div class="drink-sub" data-zh="古早味冬瓜茶，甘香順口，清爽解渴" data-en="Old-school winter melon tea, lightly sweet and thirst-quenching">古早味冬瓜茶，甘香順口，清爽解渴</div>
                   </div>
                 </div>
                 <div class="drink-price">NT$ 15</div>
@@ -489,23 +493,23 @@
   <div class="hours-inner">
     <div class="reveal">
       <div class="s-badge">IMPORTANT INFO</div>
-      <h2 class="s-title">營業時間 &amp; 預定須知</h2>
+      <h2 class="s-title" data-zh="營業時間 &amp; 預定須知" data-en="Hours &amp; Ordering Info">營業時間 &amp; 預定須知</h2>
       <div class="s-rule"></div>
     </div>
     <div class="hours-cols">
       <div class="info-card reveal">
-        <div class="info-card-hd"><span class="info-card-hd-icon">🕐</span><span class="info-card-hd-title">營業時間</span></div>
-        <div class="time-slot active"><div><div class="time-slot-label">午餐時段</div><div class="time-slot-time">11:00 – 13:30</div></div><div class="time-slot-icon">☀️</div></div>
-        <div class="time-slot"><div><div class="time-slot-label">休息時間</div><div class="time-slot-time">13:30 – 16:30</div></div><div class="time-slot-icon">💤</div></div>
-        <div class="time-slot"><div><div class="time-slot-label">晚餐時段</div><div class="time-slot-time">16:30 – 19:00</div></div><div class="time-slot-icon">🌙</div></div>
-        <p class="hours-note">＊ 菜色於休息時間重新準備，<strong>新鮮出爐</strong>，售完為止，建議提早預定。</p>
+        <div class="info-card-hd"><span class="info-card-hd-icon">🕐</span><span class="info-card-hd-title" data-zh="營業時間" data-en="Opening Hours">營業時間</span></div>
+        <div class="time-slot active"><div><div class="time-slot-label" data-zh="午餐時段" data-en="Lunch">午餐時段</div><div class="time-slot-time">11:00 – 13:30</div></div><div class="time-slot-icon">☀️</div></div>
+        <div class="time-slot"><div><div class="time-slot-label" data-zh="休息時間" data-en="Break">休息時間</div><div class="time-slot-time">13:30 – 16:30</div></div><div class="time-slot-icon">💤</div></div>
+        <div class="time-slot"><div><div class="time-slot-label" data-zh="晚餐時段" data-en="Dinner">晚餐時段</div><div class="time-slot-time">16:30 – 19:00</div></div><div class="time-slot-icon">🌙</div></div>
+        <p class="hours-note" data-zh="＊ 菜色於休息時間重新準備，新鮮出爐，售完為止，建議提早預定。" data-en="＊ Dishes are freshly prepared during the break. Sell out fast — we recommend ordering ahead.">＊ 菜色於休息時間重新準備，<strong>新鮮出爐</strong>，售完為止，建議提早預定。</p>
       </div>
       <div class="info-card reveal reveal-delay-2">
-        <div class="info-card-hd"><span class="info-card-hd-icon">📋</span><span class="info-card-hd-title">預定須知</span></div>
-        <div class="rule-item"><div class="rule-icon">🏪</div><div><div class="rule-text-title">現場點餐</div><div class="rule-text-body">親臨直接由點餐槽選菜，由我們的工讀生協助夾菜、切肉。</div></div></div>
-        <div class="rule-item"><div class="rule-icon">📞</div><div><div class="rule-text-title">電話預定自取</div><div class="rule-text-body">可來電指定取餐時間，屆時由顧客<strong>親自到店取餐</strong>，無需外送。</div></div></div>
-        <div class="rule-item"><div class="rule-icon">🛵</div><div><div class="rule-text-title">外送服務</div><div class="rule-text-body">接受外送，但需達最低訂購金額，且須視當日人手<strong>是否充足而定</strong>，建議提前來電確認。</div></div></div>
-        <div class="hours-callout"><div class="hours-callout-icon">📞</div><div class="hours-callout-text">建議來電確認：午餐尖峰時段人手繁忙，外送服務視當日人力而定，<strong>請務必致電</strong>洽詢。</div></div>
+        <div class="info-card-hd"><span class="info-card-hd-icon">📋</span><span class="info-card-hd-title" data-zh="預定須知" data-en="Ordering Guide">預定須知</span></div>
+        <div class="rule-item"><div class="rule-icon">🏪</div><div><div class="rule-text-title" data-zh="現場點餐" data-en="Walk-in Orders">現場點餐</div><div class="rule-text-body" data-zh="親臨直接由點餐槽選菜，由我們的工讀生協助夾菜、切肉。" data-en="Walk in and pick from our serving line — our staff will dish it up for you.">親臨直接由點餐槽選菜，由我們的工讀生協助夾菜、切肉。</div></div></div>
+        <div class="rule-item"><div class="rule-icon">📞</div><div><div class="rule-text-title" data-zh="電話預定自取" data-en="Call-ahead Pickup">電話預定自取</div><div class="rule-text-body" data-zh="可來電指定取餐時間，屆時由顧客親自到店取餐，無需外送。" data-en="Call ahead to reserve a pickup time — <strong>customers collect in-store</strong>, no delivery needed.">可來電指定取餐時間，屆時由顧客<strong>親自到店取餐</strong>，無需外送。</div></div></div>
+        <div class="rule-item"><div class="rule-icon">🛵</div><div><div class="rule-text-title" data-zh="外送服務" data-en="Delivery">外送服務</div><div class="rule-text-body" data-zh="接受外送，但需達最低訂購金額，且須視當日人手是否充足而定，建議提前來電確認。" data-en="Delivery available, subject to minimum order and <strong>staff availability</strong>. Please call ahead to confirm.">接受外送，但需達最低訂購金額，且須視當日人手<strong>是否充足而定</strong>，建議提前來電確認。</div></div></div>
+        <div class="hours-callout"><div class="hours-callout-icon">📞</div><div class="hours-callout-text" data-zh="建議來電確認：午餐尖峰時段人手繁忙，外送服務視當日人力而定，請務必致電洽詢。" data-en="We recommend calling ahead — lunch is our busiest period, and delivery depends on daily staffing. <strong>Please call to confirm.</strong>">建議來電確認：午餐尖峰時段人手繁忙，外送服務視當日人力而定，<strong>請務必致電</strong>洽詢。</div></div>
       </div>
     </div>
   </div>
@@ -516,17 +520,17 @@
   <div class="contact-inner">
     <div class="reveal">
       <div class="s-badge outline">GET IN TOUCH</div>
-      <h2 class="s-title">聯絡 &amp; 資訊</h2>
+      <h2 class="s-title" data-zh="聯絡 &amp; 資訊" data-en="Contact &amp; Info">聯絡 &amp; 資訊</h2>
       <div class="s-rule"></div>
     </div>
     <div class="contact-cols">
       <div class="reveal">
-        <div class="cinfo-primary"><div class="cinfo-label">電話訂餐</div><div class="cinfo-icon-wrap"><div class="cinfo-icon">📞</div><div class="cinfo-value"><a href="tel:+886 438-7930">438-7930</a></div></div><div class="cinfo-sub" style="margin-top:6px;">點餐首選</div></div>
-        <div class="cinfo-row"><div class="cinfo-row-icon">💬</div><div class="cinfo-row-text"><div class="cinfo-row-label">LINE 聯絡</div><div class="cinfo-row-val"><a href="https://line.me/R/ti/p/@105stolu" target="_blank">@秋吉便當</a></div><div class="cinfo-row-sub">點擊加入好友搜尋</div></div></div>
-        <div class="cinfo-row"><div class="cinfo-row-icon">📍</div><div class="cinfo-row-text"><div class="cinfo-row-label">店面位置</div><div class="cinfo-row-val"><a href="https://maps.app.goo.gl/EzY7nNVmXa8j4NTs8" target="_blank">台灣・中壢區大仁五街55號</a></div><div class="cinfo-row-sub">點擊開啟地圖</div></div></div>
+        <div class="cinfo-primary"><div class="cinfo-label" data-zh="電話訂餐" data-en="Call to Order">電話訂餐</div><div class="cinfo-icon-wrap"><div class="cinfo-icon">📞</div><div class="cinfo-value"><a href="tel:+886 438-7930">438-7930</a></div></div><div class="cinfo-sub" style="margin-top:6px;" data-zh="點餐首選" data-en="Preferred Method">點餐首選</div></div>
+        <div class="cinfo-row"><div class="cinfo-row-icon">💬</div><div class="cinfo-row-text"><div class="cinfo-row-label" data-zh="LINE 聯絡" data-en="LINE Chat">LINE 聯絡</div><div class="cinfo-row-val"><a href="https://line.me/R/ti/p/@105stolu" target="_blank">@秋吉便當</a></div><div class="cinfo-row-sub" data-zh="點擊加入好友搜尋" data-en="Tap to add as friend">點擊加入好友搜尋</div></div></div>
+        <div class="cinfo-row"><div class="cinfo-row-icon">📍</div><div class="cinfo-row-text"><div class="cinfo-row-label" data-zh="店面位置" data-en="Location">店面位置</div><div class="cinfo-row-val"><a href="https://maps.app.goo.gl/EzY7nNVmXa8j4NTs8" target="_blank">台灣・中壢區大仁五街55號</a></div><div class="cinfo-row-sub" data-zh="點擊開啟地圖" data-en="Tap to open map">點擊開啟地圖</div></div></div>
         <!-- Interactive map -->
         <div class="map-wrap reveal">
-          <div class="map-label">📍 店面位置・點擊互動</div>
+          <div class="map-label" data-zh="📍 店面位置・點擊互動" data-en="📍 Our Location · Interactive Map">📍 店面位置・點擊互動</div>
           <div class="map-frame-wrap">
             <iframe
               class="map-iframe"
@@ -536,23 +540,23 @@
               referrerpolicy="no-referrer-when-downgrade"
               title="店面位置地圖">
             </iframe>
-            <a class="map-open-btn" href="https://maps.google.com/?q=Taipei,Taiwan" target="_blank" rel="noopener">
+            <a class="map-open-btn" href="https://maps.google.com/?q=Taipei,Taiwan" target="_blank" rel="noopener" data-zh="在 Google Maps 中開啟 ↗" data-en="Open in Google Maps ↗">
               在 Google Maps 中開啟 ↗
             </a>
           </div>
         </div>
-        <div class="contact-callout"><span>💡</span><span>溫馨提醒：午餐尖峰時段（11:00–13:00）電話較忙，若無人接聽請稍後再撥或以 LINE 聯絡。</span></div>
+        <div class="contact-callout"><span>💡</span><span data-zh="溫馨提醒：午餐尖峰時段（11:00–13:00）電話較忙，若無人接聽請稍後再撥或以 LINE 聯絡。" data-en="Tip: Phones are busy during lunch peak (11:00–13:00). If no answer, try again later or contact us on LINE.">溫馨提醒：午餐尖峰時段（11:00–13:00）電話較忙，若無人接聽請稍後再撥或以 LINE 聯絡。</span></div>
       </div>
       <div class="reveal reveal-delay-2">
         <div class="contact-form-wrap">
           <div id="formArea">
-            <div class="form-title">留言給我們</div>
-            <div class="form-group"><label class="form-label">姓名</label><input class="form-input" type="text" placeholder="您的大名" id="fname"></div>
-            <div class="form-group"><label class="form-label">電話 / LINE</label><input class="form-input" type="text" placeholder="方便聯繫的電話或 LINE ID" id="fcontact"></div>
-            <div class="form-group"><label class="form-label">留言內容</label><textarea class="form-textarea" placeholder="預定詢問、外送細節或任何疑問…" id="fmsg" oninput="countChars()"></textarea><div class="form-char"><span id="charCount">0</span> / 500 字</div></div>
-            <button class="form-submit" onclick="submitForm()"><span>送出留言</span></button>
+            <div class="form-title" data-zh="留言給我們" data-en="Leave Us a Message">留言給我們</div>
+            <div class="form-group"><label class="form-label" data-zh="姓名" data-en="Name">姓名</label><input class="form-input" type="text" placeholder="您的大名" data-placeholder-zh="您的大名" data-placeholder-en="Your name" id="fname"></div>
+            <div class="form-group"><label class="form-label" data-zh="電話 / LINE" data-en="Phone / LINE">電話 / LINE</label><input class="form-input" type="text" placeholder="方便聯繫的電話或 LINE ID" data-placeholder-zh="方便聯繫的電話或 LINE ID" data-placeholder-en="Your phone or LINE ID" id="fcontact"></div>
+            <div class="form-group"><label class="form-label" data-zh="留言內容" data-en="Message">留言內容</label><textarea class="form-textarea" placeholder="預定詢問、外送細節或任何疑問…" data-placeholder-zh="預定詢問、外送細節或任何疑問…" data-placeholder-en="Reservations, delivery details, or any questions…" id="fmsg" oninput="countChars()"></textarea><div class="form-char"><span id="charCount">0</span> / 500 字</div></div>
+            <button class="form-submit" onclick="submitForm()"><span data-zh="送出留言" data-en="Send Message">送出留言</span></button>
           </div>
-          <div class="form-success" id="formSuccess"><div class="form-success-icon">✅</div><div class="form-success-text">留言已送出！<br>我們會盡快與您聯絡。</div></div>
+          <div class="form-success" id="formSuccess"><div class="form-success-icon">✅</div><div class="form-success-text" data-zh="留言已送出！<br>我們會盡快與您聯絡。" data-en="Message sent!<br>We'll get back to you soon.">留言已送出！<br>我們會盡快與您聯絡。</div></div>
         </div>
       </div>
     </div>
@@ -562,7 +566,7 @@
 <!-- ══════════ FOOTER ══════════ -->
 <footer>
   <div class="foot-brand">秋吉 便當</div>
-  <div class="foot-copy">© 2025 秋吉便當專賣 · 版權所有</div>
+  <div class="foot-copy" data-zh="© 2025 秋吉便當專賣 · 版權所有" data-en="© 2025 Qiuji Bento · All Rights Reserved">© 2025 秋吉便當專賣 · 版權所有</div>
 </footer>
 
     <script src="script.js"></script>
